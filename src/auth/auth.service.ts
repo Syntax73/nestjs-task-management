@@ -14,11 +14,11 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async singUp(authCredentialsDto: AuthCredentialsDto): Promise<void> {
-    return this.userRepository.singUp(authCredentialsDto);
+  async signUp(authCredentialsDto: AuthCredentialsDto): Promise<void> {
+    return this.userRepository.signUp(authCredentialsDto);
   }
 
-  async singIn(
+  async signIn(
     authCredentialsDto: AuthCredentialsDto,
   ): Promise<{ accessToken: string }> {
     const username = await this.userRepository.validateUserPassword(
